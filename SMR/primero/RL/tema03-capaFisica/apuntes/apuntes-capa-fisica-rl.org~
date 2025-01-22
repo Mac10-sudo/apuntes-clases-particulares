@@ -1,0 +1,152 @@
+#+INCLUDE: ../../../RL/rl-template.org
+#+TITLE: Aspectos Físicos
+#+STARTUP: overview
+
+* Conceptos Inciales
+** Tipos básicos de medios de red:
+- *cable de cobre*
+- *fibra*
+- *inalámbrico*
+
+** Tipos de señales / canales de transmisión:
+- señales analógicas - canales analógicos
+- señales analógicas - canales digitales
+- señales digitales - canales analógicos
+- señales digitales - canales digitales
+
+* Estándares
+Hay muchas organizaciones involucradas. Las más importantes son:
+- ISO
+- IEEE
+- ANSI
+- entre muchas otras
+
+* Señalización
+La capa física debe generar las señales inalámbricas, ópticas o eléctricas que representan el "1" y el "0" en los medios.
+
+*El método de representación de bits se denomina método de señalización*.
+
+La transmisión de la trama a través de los medios se realiza mediante una *cadena o stream de bits*.
+
+** Concepto de tiempo de bit
+El tiempo de bit es el tiempo que ocupa el medio la transmisión de un bit.
+
+Para sincronizar los relojes e identificar inicios/finales tramas (información a nivel de enlace), se utilizan combinaciones de bits
+preestablecidas (patrones).
+
+** Señales analógicas
+Los bits se representan en el medio al cambiar una o más de las siguientes características de una señal.
+- Amplitud
+- Frecuencia
+- Fase
+
+*** Ejemplos de modulación de señales
+#+CAPTION: Macareno, Ismael. (2025). Ejemplo de Modulación de señales [PNG]. Internet
+[[../apuntes/img/ejemplo-modulacion-señales.png]]
+
+*** Señales analógicas periódicas (características)
+- *Amplitud*: medida de la variación máxima del desplazamiento de la onda con respecto a su posición de reposo o equilibrio.
+- *Ciclo*: oscilación de un punto desde su posición inicial hasta que vuelve a esa posición.
+- *Periodo (T)*: duración de un ciclo
+- *Frecuencia (f=1/T)*: es una magnitud que mide el número de repeticiones por unidad de tiempo de cualquier fenómeno o suceso periódico
+- *Fase*: desplazamiento inicial de la señal
+
+*** Señales analógicas complejas
+- Una onda compleja se puede ver como la composición de ondas más sencillas con distintas frecuencias.
+- [[https://es.wikipedia.org/wiki/Transformada_de_Fourier][La transformada de /fourier/]] permite encontrar las ondas sencillas que componen un más compleja.
+** Señales digitales
+- Las *señales digitales* presentan un conjunto de valores discreto, siendo su modo de señalización los diferentes valores que presenta la señal física.
+- La *tasa de bits* es el número de bits transmitidos por unidad de tiempo.
+- La *tasa de baudios* es el número de señales por segundo. Un baudio puede estar formada por varios bits.
+** Codificación *digital*
+- *La codificación es un método que se utiliza para convertir un flujo o conjunto de bits de datos en un código predefinido*
+- La utilización de patrones predecibles permite:
+  - Identificar bits de datos y bits de control.
+  - Mejora la detección de errores en los medios.
+  - Identificar el comienzo y el final de una trama
+
+*** Codificación digital - unipolar, NRZ-L y NRZI)
+- *Código unipolar*: La amplitud media no es cero. Componente de corriente continua.
+- *Código NRZ-L*: Sincronización con muchos 0s o 1s seguidos.
+- *Código NRZI*:
+  - 0: la señal con cambia
+  - 1: la señal *se invierte*
+
+*** Codificación digital - RZ
+*Como NRZL pero a mitad del intervalo se vuelve a cero. Al principio de bit el comportamiento es:*
+- 0: transición de 0 a negativo
+- 1: transición de 0 a positivo
+
+*Requiere 2 transiciones por cada bit.*
+
+*** Ejemplo de codificación digital RZ
+#+CAPTION: Macareno, Ismael. (2025). Ejemplo de codificación digital RZ [PNG]. Internet
+[[../apuntes/img/ejemplo-codificacion-rz.png]]
+
+*** Codificación digital - Manchester
+Funciona de la siguiente manera:
+- 0 -> La señal sube de -x a x
+- 1 -> La señal baja de x a -x
+- La transición se realiza a mitad del bit.
+*** Codificación digital - Manchester diferencial
+Funciona de la siguiente manera:
+- 0 -> Transición al principio
+- 1 -> *Sin* transición al principio
+- Siempre transición en medio.
+- La transición se realiza a mitad del bit.
+- Permite sincronización entre emisor y receptor
+*** Ejemplo de Manchester diferencial
+#+CAPTION: Macareno, Ismael. (2025). Ejemplo de codificación en manchester diferencial [PNG]. Internet
+[[../apuntes/img/ejemplo-codificacion-manchester-diferencial.png]]
+*** Codificación digital - AMI
+Funciona de la siguiente manera:
+  - 0 -> 0
+  - 1 -> Alterna entre -x y x
+  - Problemas para sincronizar muchos 0s seguidos.
+*** Codificación digital - Bipolar con sustitución de 8 ceros (B8ZS)
+Como la AMI, pero cuando aparecen 8 "ceros" consecutivos, se introducen cambios artificiales en el patrón basados en la polaridad del
+último bit 'uno' codificado:
+- *V*: Violación, mantiene la polaridad anterior en la secuencia.
+- *B*: Transición, invierte la polaridad anterior en la secuencia.
+- Los ocho ceros se sustituyen por la secuencia: 000V B0VB
+*** Ejemplo de B8ZS
+#+CAPTION: Macareno, Ismael. (2025). Ejemplo de codificación en B8ZS [PNG]. Internet
+[[../apuntes/img/ejemplo-codificacion-b8zs.png]]
+*** Codificación digital - 4B/5B
+- En 4B/5B, cada byte que a transmitir se divide en partes de cuatro bits y se codifica según la tabla como valores de cinco bits
+denominados símbolos.
+
+- 4B/5B garantiza la aplicación de al menos un cambio de nivel por código para proporcionar sincronización.
+** Capacidad del canal para transportar datos
+- Se puede medir la transferencia de datos en *tres formas:*
+  - *Ancho de banda*: capacidad de un medio para transportar datos sin procesar en un tiempo determinado
+  - *Rendimiento*: medida de transferencia de bits a través de los medios durante un período de tiempo determinado.
+  - *Capacidad de transferencia útil*: mide la transferencia efectiva de los datos del usuario entre las entidades de la capa de aplicación
+
+** Actividades
+Codifica los dígitos 1011100010 en:
+- NRZ
+- NRZI
+- AMI
+- Manchester
+- Bipolar con sustitución de 8 ceros
+- 4B/5B
+
+** Señales analógicas en medios digitales
+Los pasos para la conversión de una señal analógica a digital son:
+- muestreo
+- redondeo
+- codificación
+- transmisión
+
+La señal se reconstruye en el receptor a partir de información digital.
+
+- Codificador: transforma de analógico a digital
+- Descodificador: transforma de digital a analógico
+
+*** Señales analógicas en medios digitales - Muestreo
+- se toman medidas de la señal analógica a intervalos regulares
+- a mayor número de muestras por segundo, *más fiel* es la onda digital resultante
+- es necesario establecer cuántos bits son necesarios para cada medición
+- a mayor número de bits, *mayor precisión* y *más fiel* será la onda resultante
+

@@ -1,0 +1,39 @@
+#+INCLUDE: ../../../smr-template.org
+#+TITLE: Examen /Bash Scripting/ Completo - Nivel Básico
+#+STARTUP: overview
+#+OPTIONS: toc:nil
+
+* Menú =Bash= básico
+#+CAPTION: Macareno, Ismael. (2024). Ejemplo Menú =Bash= para examen [PNG]. Propia
+[[../examenes/img/ejemplo-script-menu-basico.png]]
+
+Se solicita que el alumno realice un menú =bash= como el que se puede ver en la imagen de arriba.
+
+Cada una de las opciones tendrá una funcionalidad descrita a continuación:
+1. Mostrará *solo* el nombre de los dispositivos conectados (Ej. /dev/loop1)
+2. Listar la =$HOME= del usuario que ejecute el script
+3. Obtener los *inodos* de todo lo contenido en la =$HOME= del usuario que ejecute el script
+4. Se creará un *submenu* en el cual se darán dos opciones:
+   - Crear un enlace simbólico (se solicitará al usuario la ruta completa del =TARGET= y el =DIRECTORY=)
+   -  Crear un enlace duro (se solicitará al usuario la ruta completa del =TARGET= y el =DIRECTORY=)
+5. Obtener el PID del proceso ejecutándose más elevado
+6. Obtener el número de procesos que se han ejecutado desde que se inició el sistema
+7. Mostrar el árbol de procesos
+8. Mostrar los usuarios conectados
+9. Crear un bucle en el cuál se le solicite al usuario un número de ficheros a crear y luego
+   crear cada uno de estos ficheros con un contenido en su interior (Ej. Fic1.txt, Fic2.txt, etc)
+10. Crear un *submenu* en el cuál se darán las siguientes opciones:
+    -  Dar la fecha completa (Ej. Wed Dec 11 10:03:59 AM CET 2024)
+    - Dar solo la Fecha (Ej.2024-12-11)
+    - Dar solo la hora (Ej. 10:04:55)
+    - Dar el día de la semana (Ej. 11)
+    - Dar el mes del año (Ej. 12)
+    - Dar el año (Ej. 2024)
+11. Crear un submenu con las siguientes opciones
+    - Sacar *solo el nombre* de todos los usuarios del sistema
+    - Sacar *solo* los /=hashes=/ de las contraseñas de los usuarios del sistema
+12. Sacar por pantalla al usuario el mensaje *Gracias por ejecutarme* y cerrar el programa
+
+
+El programa deberá ejecutarse todo el rato hasta que el usuario quiera salir usando la opción
+número 12.

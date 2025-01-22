@@ -1,0 +1,85 @@
+#+INCLUDE: ~/repos/clases-particulares/SMR/smr-template.org
+#+TITLE: Preparación Primer Exámen SOR
+
+\blankpage
+
+* Teoría
+1. Dime las clasificaciones por SO que conoces
+2. ¿Cuáles son los distintos tipos de SO por su forma?
+3. ¿Cuáles son las ventajas de las máquinas virtuales?
+4. ¿Cuál es la diferencia entre VDI y OVA?
+5. Explica las siguientes configuraciones de red de VirtualBox:
+   - *NAT*
+   - *Bridged*
+   - *Red Interna*
+6. Dime todas las diferencias que conozcas entre las versiones /Home/ y /Pro/ de /Microsoft Windows/
+7. Explícame MBR
+8. Explícamen GPT
+9. Dime todo lo que sepas sobre los siguientes /filesystems/:
+   - FAT16
+   - FAT32
+   - exFat
+   - NTFS
+10. Define y clasifica:
+   - Licencia OEM
+   - Licencia por volumen
+   - /Software freeware/
+   - /Software shareware/
+   - Licencia GNU
+
+* Práctica
+*A NO SER QUE SE INDIQUE, NO SE PUEDE REALIZAR NADA DE MANERA GRÁFICA*
+** CMD
+1. ¿Qué versión de /Windows/ tenemos instalado? Usa los 2 comandos conocidos
+2. Crea *sin gráfico* la partición de DATOS. Puedes añadir otro disco o particionar el que tengas
+3. Defragmenta la partición que acabas de crear
+4. Crea la siguiente estructura de directorios
+   [[../tipo-examen/img/1.png]]
+5. Crea un directorio en =C:\= que se llame PRACTICA1 y copia el fichero =LABEL.EXE= del subdirectorio =SYSTEM32= de Windows en
+   PRIMERAPARTE pero con el nombre =ETIQUETA.EXE=. *Usa dos comandos*
+6. Crea un fichero llamado manual.txt
+7. Modifica los atributos del fichero creado anteriormente para que tenga los atributos de *sistema* y *oculto*.
+8. Sin moverte de la carpeta de usuario, y utilizando ruta relativa, copia todos los archivos (sin copiar subcarpetas) de la carpeta
+   windows de C en la carpeta PRUEBA
+9. Haz una copia idéntica de la carpeta prueba a la carpeta copiaPrueba, en la misma partición
+10. Borrar la carpeta copiaPrueba, y mirando la ayuda del comando xcopy, vuelve a copiar la carpeta, de forma que se copien todos
+    los archivos.
+11. En la carpeta prueba. Pon atributos de sistema y oculto a los archivos que empiezan por w y tienen la extensión .log
+12. Quita todos los atributos en los archivos de la carpeta prueba
+
+** Powershell
+*** Estructura de Directorios
+1. Ejecuta Powershell sin privilegios de administración
+2. Crea un directorio "tunombreyapellido"
+3. Sitúate en el
+4. Crea la siguiente estructura
+   [[../tipo-examen/img/2.png]]
+5. Cambia el nombre de finales por fin
+6. Copia el directorio archivos en normativa
+7. Mueve el directorio fin a proyecto
+8. Consulta la ayuda del =copy-item=. Consulta los ejemplos de ayuda
+9. Ejecuta el siguiente comando y explica lo que hace:
+   - =Copy-item proyecto .. -recurse=
+10. Vuelve a dejar la estructura de directorios como estaba en el ejercicio 4
+*** Trabajando con archivos
+1. Desde el Powershell crea los archivos Norm1.txt y Norm2.txt en el directorio normativa, y p1.bat y p2.bat
+   en proyecto. De momento estarán vacíos
+2. Comprueba el contenido de los ficheros anteriores
+3. Copia los archivos Norm1 y Norm2 al directorio archivos. Modifica su nombre a Norm1_antiguo y Norm2_antiguo en directorio
+   archivos
+** Programar tareas GUI
+1. Realizar un archivo por lote que obtenga los ficheros modificados hoy. Como este fichero vamos a ejecutarlo otros días, en la línea
+   que se filtra por fecha, introducimos la fecha como variable de /Windows/. Para ello usammos: =find "%date%"=
+2. Añade al anterior fichero, una línea que sirva para apagar el equipo.
+3. Programar para que todos los días a las 14:30 se ejecute el fichero creado anteriormente
+** Programar tareas CLI
+1. Programas un /script/ que deje guardados todos los inicios de sesión:
+   - Crear 3 usuarios en /Windows/
+     - Nombre
+     - Primer apellido
+     - Segundo apellido 
+   - Crear un fichero por lotes, que guarde cuando se ejecute en un fichero
+     - *el usuario .... ha iniciado sesión el día .... a las .... horas*
+     - Se tendrá en cuenta que en el fichero quedará guardado todas las veces que se ejecute el /script/
+   - Programar con el comando =schtasks= para que se ejecute el /script/ cada vez que un usuario inicie sesión
+   - Comprobar el funcionamiento iniciando sesión al menos una vez con los 3 usuarios

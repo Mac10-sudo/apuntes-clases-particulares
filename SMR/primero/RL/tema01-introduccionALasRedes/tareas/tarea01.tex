@@ -1,0 +1,135 @@
+% Created 2025-01-08 Wed 16:26
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[margin=0.5in]{geometry}
+\hypersetup{colorlinks, linkcolor=black}
+\usepackage{geometry}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf[L]{Redes de área local}
+\fancyhf[R]{Tema 01}
+\fancyfoot[R]{ismael.macareno@educa.madrid.org}
+\fancyfoot[L]{CC BY-NC-SA 4.0}
+\usepackage{parskip}
+\usepackage{mdframed}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\definecolor{shadecolor}{RGB}{220,220,220}
+\newenvironment{shadedcode}{%
+\VerbatimEnvironment
+\begin{mdframed}[backgroundcolor=shadecolor,linewidth=0pt]}%
+{\end{mdframed}}
+\usepackage{attachfile2}
+\newcommand{\textattachfilecolor}[2]{\textattachfile[color=0 0 0.5]{#1}{\textcolor{blue}{#2}}}
+\usepackage[spanish]{babel}
+\usepackage{datetime2}
+\DTMlangsetup[es-ES]{ord=raise}
+\renewcommand{\dateseparator}{/}
+\usepackage{titlesec}
+\usepackage{afterpage}
+\newcommand\blankpage{\null\thispagestyle{empty}\newpage}
+\usepackage{colortbl}
+\usepackage{pdfpages}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[spanish]{babel}
+\lstset{
+inputencoding=utf8,
+extendedchars=true,
+literate={ñ}{{\~n}}1 {Ñ}{{\~N}}1 {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1,
+basicstyle=\ttfamily,
+breaklines=true,
+columns=fullflexible,
+keepspaces=true,
+language=TeX,
+morekeywords={*, -, **, /}
+}
+\author{Ismael Macareno Chouikh}
+\date{\today}
+\title{Práctica 1 - Investigación}
+\hypersetup{
+ pdfauthor={Ismael Macareno Chouikh},
+ pdftitle={Práctica 1 - Investigación},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\blankpage
+
+\section{Pautas generales con respecto a la entrega de la práctica}
+\label{sec:org5efc898}
+La práctica deberá contener lo siguiente con respecto a la estética:
+\begin{itemize}
+\item Encabezados y pies de página
+\item Numeración de las páginas
+\item Títulos por secciones
+\item Portada, índice y bibliografía
+\item Texto justificado en tamaño 12
+\end{itemize}
+
+\textbf{La práctica se debe entregar en formato PDF obligatoriamente en el aula virtual proporcionada por el docente}  
+\section{Generaciones}
+\label{sec:org702e6e2}
+Investiga más a fondo las distintas generaciones vistas en los \href{https://clasesmaca.gnomio.com/pluginfile.php/29/mod\_resource/content/1/APUNTES\%20RL\%20TEMA\%201.pdf}{apuntes}.
+
+Las generaciones a investigar son:
+\begin{itemize}
+\item 1ª: lenguaje máquina
+\item 2ª: Ensamblador
+\item 3ª: Fortran y Cobol
+\item 4ª: C, Basic, Pascal, etc.
+\item 5ª: Sistemas expertos
+\item 6ª: Java, C++, PHP, etc.
+\end{itemize}
+
+\section{Resumen de los elementos de la comunicación}
+\label{sec:org3ce9178}
+Resume de una manera adecuada los elementos necesarios para la comunicación vistos en los apuntes.
+
+Los métodos recomendados por el docente son:
+\begin{itemize}
+\item Mapa mental
+\item Resumen mediante puntos y subsecciones de los mismos
+\end{itemize}
+
+
+
+\section{Investigación sobre las distintas topologías físicas}
+\label{sec:orgd5ed89f}
+Investiga sobre las distintas topologías físicas vistas en los apuntes del tema 01.
+
+Investiga sobre:
+\begin{itemize}
+\item Área de expansión
+\item Año de creación
+\item Información general
+\end{itemize}
+
+
+\section{Diferencias entre M.A.Cs}
+\label{sec:org5760274}
+Hacer un cuadro resumen de diferencias entre:
+\begin{itemize}
+\item M.A.C --> con respecto al identificador único de las tarjetas de red
+\item M.A.C --> con respecto a la subcapa MAC de la capa 2 del nivel ISO/OSI (Enlace de datos)
+\end{itemize}
+\end{document}

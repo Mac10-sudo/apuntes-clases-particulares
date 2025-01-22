@@ -1,0 +1,48 @@
+#+INCLUDE: ~/repos/clases-particulares/SMR/primero/RL/rl-template.org
+#+TITLE: Práctica 1 - Investigación
+#+STARTUP: overview
+
+\blankpage
+
+* Pautas generales con respecto a la entrega de la práctica
+La práctica deberá contener lo siguiente con respecto a la estética:
+- Encabezados y pies de página
+- Numeración de las páginas
+- Títulos por secciones
+- Portada, índice y bibliografía
+- Texto justificado en tamaño 12
+
+*La práctica se debe entregar en formato PDF obligatoriamente en el aula virtual proporcionada por el docente*  
+* Generaciones
+Investiga más a fondo las distintas generaciones vistas en los [[https://clasesmaca.gnomio.com/pluginfile.php/29/mod_resource/content/1/APUNTES%20RL%20TEMA%201.pdf][apuntes]].
+
+Las generaciones a investigar son:
+- 1ª: lenguaje máquina
+- 2ª: Ensamblador
+- 3ª: Fortran y Cobol
+- 4ª: C, Basic, Pascal, etc.
+- 5ª: Sistemas expertos
+- 6ª: Java, C++, PHP, etc.
+
+* Resumen de los elementos de la comunicación
+Resume de una manera adecuada los elementos necesarios para la comunicación vistos en los apuntes.
+
+Los métodos recomendados por el docente son:
+- Mapa mental
+- Resumen mediante puntos y subsecciones de los mismos
+
+
+
+* Investigación sobre las distintas topologías físicas
+Investiga sobre las distintas topologías físicas vistas en los apuntes del tema 01.
+
+Investiga sobre:
+- Área de expansión
+- Año de creación
+- Información general
+
+
+* Diferencias entre M.A.Cs
+Hacer un cuadro resumen de diferencias entre:
+- M.A.C --> con respecto al identificador único de las tarjetas de red
+- M.A.C --> con respecto a la subcapa MAC de la capa 2 del nivel ISO/OSI (Enlace de datos)

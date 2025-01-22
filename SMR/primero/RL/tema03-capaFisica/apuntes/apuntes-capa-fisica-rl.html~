@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Aspectos Físicos</title>
+<meta name="author" content="Ismael Macareno Chouikh"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Aspectos Físicos</h1><p class="subtitle"></p>
+<h2 class="author">Ismael Macareno Chouikh</h2><p class="date">Created: 2025-01-16 Thu 18:49</p>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org0532ff0">1. Conceptos Inciales</a>
+<ul>
+<li><a href="#/slide-orgbd790c9">1.1. Tipos básicos de medios de red:</a></li>
+<li><a href="#/slide-org6c25102">1.2. Tipos de señales / canales de transmisión:</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orga2f53da">2. Estándares</a></li>
+<li><a href="#/slide-orgf26821b">3. Señalización</a>
+<ul>
+<li><a href="#/slide-org644402a">3.1. Concepto de tiempo de bit</a></li>
+<li><a href="#/slide-orga25bf2e">3.2. Señales analógicas</a>
+<ul>
+<li><a href="#/slide-orgc30783e">3.2.1. Ejemplos de modulación de señales</a></li>
+<li><a href="#/slide-org7b3234a">3.2.2. Señales analógicas periódicas (características)</a></li>
+<li><a href="#/slide-orgcd087f0">3.2.3. Señales analógicas complejas</a></li>
+</ul>
+</li>
+<li><a href="#/slide-org69ba20a">3.3. Señales digitales</a></li>
+<li><a href="#/slide-orge6d2fd3">3.4. Codificación <b>digital</b></a>
+<ul>
+<li><a href="#/slide-org645d022">3.4.1. Codificación digital - unipolar, NRZ-L y NRZI)</a></li>
+<li><a href="#/slide-orgc8236ac">3.4.2. Codificación digital - RZ</a></li>
+<li><a href="#/slide-orgbb0882f">3.4.3. Ejemplo de codificación digital RZ</a></li>
+<li><a href="#/slide-orgc386e45">3.4.4. Codificación digital - Manchester</a></li>
+<li><a href="#/slide-org86a6e8f">3.4.5. Codificación digital - Manchester diferencial</a></li>
+<li><a href="#/slide-orgdf2ba87">3.4.6. Ejemplo de Manchester diferencial</a></li>
+<li><a href="#/slide-org87bcd6a">3.4.7. Codificación digital - AMI</a></li>
+<li><a href="#/slide-orgc0285b4">3.4.8. Codificación digital - Bipolar con sustitución de 8 ceros (B8ZS)</a></li>
+<li><a href="#/slide-org00ed73e">3.4.9. Ejemplo de B8ZS</a></li>
+<li><a href="#/slide-org9cb68bc">3.4.10. Codificación digital - 4B/5B</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgd6094ef">3.5. Capacidad del canal para transportar datos</a></li>
+<li><a href="#/slide-orgafc9c9d">3.6. Actividades</a></li>
+<li><a href="#/slide-orgc57cd1c">3.7. Señales analógicas en medios digitales</a>
+<ul>
+<li><a href="#/slide-org7548e6d">3.7.1. Señales analógicas en medios digitales - Muestreo</a></li>
+<li><a href="#/slide-orgfe65400">3.7.2. Señales analógicas en medios digitales - Redonde y codificación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#/slide-org7089fe9">4. Multiplexación</a>
+<ul>
+<li><a href="#/slide-org33cd494">4.1. ¿De qué trata?</a></li>
+<li><a href="#/slide-orgb63588b">4.2. Multiplexación por división de <b>frecuencia</b></a></li>
+<li><a href="#/slide-orgcab10f6">4.3. Multiplexación por división en <b>tiempo</b></a></li>
+</ul>
+</li>
+<li><a href="#/slide-org95ef436">5. Sincronización</a>
+<ul>
+<li><a href="#/slide-org6408dae">5.1. Multiplexación - Transmisión <b>asíncrona</b></a></li>
+<li><a href="#/slide-org6c7e76b">5.2. Multiplexación - Transmisión <b>síncrona</b></a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgd219afc">6. Modos de transmisión</a>
+<ul>
+<li><a href="#/slide-org9c62333">6.1. Transmisión <b>serie</b></a></li>
+<li><a href="#/slide-org780cff7">6.2. Transmisión <b>paralelo</b></a></li>
+</ul>
+</li>
+<li><a href="#/slide-org2bbc406">7. Perturbaciones en la transmisión</a>
+<ul>
+<li><a href="#/slide-org25ede9d">7.1. Atenuación</a></li>
+<li><a href="#/slide-orga06bce5">7.2. Distorsión</a></li>
+<li><a href="#/slide-org6045047">7.3. Interferencia</a></li>
+<li><a href="#/slide-org6fa1981">7.4. Ruido</a></li>
+<li><a href="#/slide-org0969cca">7.5. Diafonía</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org0532ff0">
+<h2 id="org0532ff0"><span class="section-number-2">1.</span> Conceptos Inciales</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</section>
+<section id="slide-orgbd790c9">
+<h3 id="orgbd790c9"><span class="section-number-3">1.1.</span> Tipos básicos de medios de red:</h3>
+<ul>
+<li><b>cable de cobre</b></li>
+<li><b>fibra</b></li>
+<li><b>inalámbrico</b></li>
+
+</ul>
+
+</section>
+<section id="slide-org6c25102">
+<h3 id="org6c25102"><span class="section-number-3">1.2.</span> Tipos de señales / canales de transmisión:</h3>
+<ul>
+<li>señales analógicas - canales analógicos</li>
+<li>señales analógicas - canales digitales</li>
+<li>señales digitales - canales analógicos</li>
+<li>señales digitales - canales digitales</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga2f53da">
+<h2 id="orga2f53da"><span class="section-number-2">2.</span> Estándares</h2>
+<p>
+Hay muchas organizaciones involucradas. Las más importantes son:
+</p>
+<ul>
+<li>ISO</li>
+<li>IEEE</li>
+<li>ANSI</li>
+<li>entre muchas otras</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf26821b">
+<h2 id="orgf26821b"><span class="section-number-2">3.</span> Señalización</h2>
+<p>
+La capa física debe generar las señales inalámbricas, ópticas o eléctricas que representan el "1" y el "0" en los medios.
+</p>
+
+<p>
+<b>El método de representación de bits se denomina método de señalización</b>.
+</p>
+
+<p>
+La transmisión de la trama a través de los medios se realiza mediante una <b>cadena o stream de bits</b>.
+</p>
+
+</section>
+<section id="slide-org644402a">
+<h3 id="org644402a"><span class="section-number-3">3.1.</span> Concepto de tiempo de bit</h3>
+<p>
+El tiempo de bit es el tiempo que ocupa el medio la transmisión de un bit.
+</p>
+
+<p>
+Para sincronizar los relojes e identificar inicios/finales tramas (información a nivel de enlace), se utilizan combinaciones de bits
+preestablecidas (patrones).
+</p>
+
+</section>
+<section id="slide-orga25bf2e">
+<h3 id="orga25bf2e"><span class="section-number-3">3.2.</span> Señales analógicas</h3>
+<p>
+Los bits se representan en el medio al cambiar una o más de las siguientes características de una señal.
+</p>
+<ul>
+<li>Amplitud</li>
+<li>Frecuencia</li>
+<li>Fase</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc30783e">
+<h4 id="orgc30783e"><span class="section-number-4">3.2.1.</span> Ejemplos de modulación de señales</h4>
+
+<div id="org6c2876c" class="figure">
+<p><img src="../apuntes/img/ejemplo-modulacion-señales.png" alt="ejemplo-modulacion-señales.png" />
+</p>
+<p><span class="figure-number">Figura 1: </span>Macareno, Ismael. (2025). Ejemplo de Modulación de señales [PNG]. Internet</p>
+</div>
+
+</section>
+<section id="slide-org7b3234a">
+<h4 id="org7b3234a"><span class="section-number-4">3.2.2.</span> Señales analógicas periódicas (características)</h4>
+<ul>
+<li><b>Amplitud</b>: medida de la variación máxima del desplazamiento de la onda con respecto a su posición de reposo o equilibrio.</li>
+<li><b>Ciclo</b>: oscilación de un punto desde su posición inicial hasta que vuelve a esa posición.</li>
+<li><b>Periodo (T)</b>: duración de un ciclo</li>
+<li><b>Frecuencia (f=1/T)</b>: es una magnitud que mide el número de repeticiones por unidad de tiempo de cualquier fenómeno o suceso periódico</li>
+<li><b>Fase</b>: desplazamiento inicial de la señal</li>
+
+</ul>
+
+</section>
+<section id="slide-orgcd087f0">
+<h4 id="orgcd087f0"><span class="section-number-4">3.2.3.</span> Señales analógicas complejas</h4>
+<ul>
+<li>Una onda compleja se puede ver como la composición de ondas más sencillas con distintas frecuencias.</li>
+<li><a href="https://es.wikipedia.org/wiki/Transformada_de_Fourier">La transformada de <i>fourier</i></a> permite encontrar las ondas sencillas que componen un más compleja.</li>
+
+</ul>
+</section>
+<section id="slide-org69ba20a">
+<h3 id="org69ba20a"><span class="section-number-3">3.3.</span> Señales digitales</h3>
+<ul>
+<li>Las <b>señales digitales</b> presentan un conjunto de valores discreto, siendo su modo de señalización los diferentes valores que presenta la señal física.</li>
+<li>La <b>tasa de bits</b> es el número de bits transmitidos por unidad de tiempo.</li>
+<li>La <b>tasa de baudios</b> es el número de señales por segundo. Un baudio puede estar formada por varios bits.</li>
+
+</ul>
+</section>
+<section id="slide-orge6d2fd3">
+<h3 id="orge6d2fd3"><span class="section-number-3">3.4.</span> Codificación <b>digital</b></h3>
+<ul>
+<li><b>La codificación es un método que se utiliza para convertir un flujo o conjunto de bits de datos en un código predefinido</b></li>
+<li>La utilización de patrones predecibles permite:
+<ul>
+<li>Identificar bits de datos y bits de control.</li>
+<li>Mejora la detección de errores en los medios.</li>
+<li>Identificar el comienzo y el final de una trama</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org645d022">
+<h4 id="org645d022"><span class="section-number-4">3.4.1.</span> Codificación digital - unipolar, NRZ-L y NRZI)</h4>
+<ul>
+<li><b>Código unipolar</b>: La amplitud media no es cero. Componente de corriente continua.</li>
+<li><b>Código NRZ-L</b>: Sincronización con muchos 0s o 1s seguidos.</li>
+<li><b>Código NRZI</b>:
+<ul>
+<li>0: la señal con cambia</li>
+<li>1: la señal <b>se invierte</b></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgc8236ac">
+<h4 id="orgc8236ac"><span class="section-number-4">3.4.2.</span> Codificación digital - RZ</h4>
+<p>
+<b>Como NRZL pero a mitad del intervalo se vuelve a cero. Al principio de bit el comportamiento es:</b>
+</p>
+<ul>
+<li>0: transición de 0 a negativo</li>
+<li>1: transición de 0 a positivo</li>
+
+</ul>
+
+<p>
+<b>Requiere 2 transiciones por cada bit.</b>
+</p>
+
+</section>
+<section id="slide-orgbb0882f">
+<h4 id="orgbb0882f"><span class="section-number-4">3.4.3.</span> Ejemplo de codificación digital RZ</h4>
+
+<div id="orga0cdfea" class="figure">
+<p><img src="../apuntes/img/ejemplo-codificacion-rz.png" alt="ejemplo-codificacion-rz.png" />
+</p>
+<p><span class="figure-number">Figura 2: </span>Macareno, Ismael. (2025). Ejemplo de codificación digital RZ [PNG]. Internet</p>
+</div>
+
+</section>
+<section id="slide-orgc386e45">
+<h4 id="orgc386e45"><span class="section-number-4">3.4.4.</span> Codificación digital - Manchester</h4>
+<p>
+Funciona de la siguiente manera:
+</p>
+<ul>
+<li>0 -&gt; La señal sube de -x a x</li>
+<li>1 -&gt; La señal baja de x a -x</li>
+<li>La transición se realiza a mitad del bit.</li>
+
+</ul>
+</section>
+<section id="slide-org86a6e8f">
+<h4 id="org86a6e8f"><span class="section-number-4">3.4.5.</span> Codificación digital - Manchester diferencial</h4>
+<p>
+Funciona de la siguiente manera:
+</p>
+<ul>
+<li>0 -&gt; Transición al principio</li>
+<li>1 -&gt; <b>Sin</b> transición al principio</li>
+<li>Siempre transición en medio.</li>
+<li>La transición se realiza a mitad del bit.</li>
+<li>Permite sincronización entre emisor y receptor</li>
+
+</ul>
+</section>
+<section id="slide-orgdf2ba87">
+<h4 id="orgdf2ba87"><span class="section-number-4">3.4.6.</span> Ejemplo de Manchester diferencial</h4>
+
+<div id="org0288647" class="figure">
+<p><img src="../apuntes/img/ejemplo-codificacion-manchester-diferencial.png" alt="ejemplo-codificacion-manchester-diferencial.png" />
+</p>
+<p><span class="figure-number">Figura 3: </span>Macareno, Ismael. (2025). Ejemplo de codificación en manchester diferencial [PNG]. Internet</p>
+</div>
+</section>
+<section id="slide-org87bcd6a">
+<h4 id="org87bcd6a"><span class="section-number-4">3.4.7.</span> Codificación digital - AMI</h4>
+<p>
+Funciona de la siguiente manera:
+</p>
+<ul>
+<li>0 -&gt; 0</li>
+<li>1 -&gt; Alterna entre -x y x</li>
+<li>Problemas para sincronizar muchos 0s seguidos.</li>
+
+</ul>
+</section>
+<section id="slide-orgc0285b4">
+<h4 id="orgc0285b4"><span class="section-number-4">3.4.8.</span> Codificación digital - Bipolar con sustitución de 8 ceros (B8ZS)</h4>
+<p>
+Como la AMI, pero cuando aparecen 8 "ceros" consecutivos, se introducen cambios artificiales en el patrón basados en la polaridad del
+último bit 'uno' codificado:
+</p>
+<ul>
+<li><b>V</b>: Violación, mantiene la polaridad anterior en la secuencia.</li>
+<li><b>B</b>: Transición, invierte la polaridad anterior en la secuencia.</li>
+<li>Los ocho ceros se sustituyen por la secuencia: 000V B0VB</li>
+
+</ul>
+</section>
+<section id="slide-org00ed73e">
+<h4 id="org00ed73e"><span class="section-number-4">3.4.9.</span> Ejemplo de B8ZS</h4>
+
+<div id="orga29a04b" class="figure">
+<p><img src="../apuntes/img/ejemplo-codificacion-b8zs.png" alt="ejemplo-codificacion-b8zs.png" />
+</p>
+<p><span class="figure-number">Figura 4: </span>Macareno, Ismael. (2025). Ejemplo de codificación en B8ZS [PNG]. Internet</p>
+</div>
+</section>
+<section id="slide-org9cb68bc">
+<h4 id="org9cb68bc"><span class="section-number-4">3.4.10.</span> Codificación digital - 4B/5B</h4>
+<ul>
+<li>En 4B/5B, cada byte que a transmitir se divide en partes de cuatro bits y se codifica según la tabla como valores de cinco bits</li>
+
+</ul>
+<p>
+denominados símbolos.
+</p>
+
+<ul>
+<li>4B/5B garantiza la aplicación de al menos un cambio de nivel por código para proporcionar sincronización.</li>
+
+</ul>
+</section>
+<section id="slide-orgd6094ef">
+<h3 id="orgd6094ef"><span class="section-number-3">3.5.</span> Capacidad del canal para transportar datos</h3>
+<ul>
+<li>Se puede medir la transferencia de datos en <b>tres formas:</b>
+<ul>
+<li><b>Ancho de banda</b>: capacidad de un medio para transportar datos sin procesar en un tiempo determinado</li>
+<li><b>Rendimiento</b>: medida de transferencia de bits a través de los medios durante un período de tiempo determinado.</li>
+<li><b>Capacidad de transferencia útil</b>: mide la transferencia efectiva de los datos del usuario entre las entidades de la capa de aplicación</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgafc9c9d">
+<h3 id="orgafc9c9d"><span class="section-number-3">3.6.</span> Actividades</h3>
+<p>
+Codifica los dígitos 1011100010 en:
+</p>
+<ul>
+<li>NRZ</li>
+<li>NRZI</li>
+<li>AMI</li>
+<li>Manchester</li>
+<li>Bipolar con sustitución de 8 ceros</li>
+<li>4B/5B</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc57cd1c">
+<h3 id="orgc57cd1c"><span class="section-number-3">3.7.</span> Señales analógicas en medios digitales</h3>
+<p>
+Los pasos para la conversión de una señal analógica a digital son:
+</p>
+<ul>
+<li>muestreo</li>
+<li>redondeo</li>
+<li>codificación</li>
+<li>transmisión</li>
+
+</ul>
+
+<p>
+La señal se reconstruye en el receptor a partir de información digital.
+</p>
+
+<ul>
+<li>Codificador: transforma de analógico a digital</li>
+<li>Descodificador: transforma de digital a analógico</li>
+
+</ul>
+
+</section>
+<section id="slide-org7548e6d">
+<h4 id="org7548e6d"><span class="section-number-4">3.7.1.</span> Señales analógicas en medios digitales - Muestreo</h4>
+<ul>
+<li>se toman medidas de la señal analógica a intervalos regulares</li>
+<li>a mayor número de muestras por segundo, <b>más fiel</b> es la onda digital resultante</li>
+<li>es necesario establecer cuántos bits son necesarios para cada medición</li>
+<li>a mayor número de bits, <b>mayor precisión</b> y <b>más fiel</b> será la onda resultante</li>
+
+</ul>
+
+</section>
+<section id="slide-orgfe65400">
+<h4 id="orgfe65400"><span class="section-number-4">3.7.2.</span> Señales analógicas en medios digitales - Redonde y codificación</h4>
+<ul>
+<li><b>Redondeo:</b> a mayor número de muestras obtenidas, la señal digital reflejará con mayor precisión la señal analógica que reproduce. Aquellos valores de la señal analógica que no se
+consideran en la digital, deberán ser redondeados al valor digital mas próximo.</li>
+<li><b>Codificación:</b> en última instancia, la transmisión por el medio será digital binaria</li>
+<li><b>Envío por canal digital:</b> para el envío final, se podrá utilizar cualquiera de los modelos de codificación digital vistos anteriormente</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org7089fe9">
+<h2 id="org7089fe9"><span class="section-number-2">4.</span> Multiplexación</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</section>
+<section id="slide-org33cd494">
+<h3 id="org33cd494"><span class="section-number-3">4.1.</span> ¿De qué trata?</h3>
+<p>
+<b>técnica que permite compartir el medio entre diferentes usuarios para obtener el mejor aprovechamiento de su ancho de banda</b>
+</p>
+
+</section>
+<section id="slide-orgb63588b">
+<h3 id="orgb63588b"><span class="section-number-3">4.2.</span> Multiplexación por división de <b>frecuencia</b></h3>
+<ul>
+<li>Se asigna una banda de frecuencias concreta a cada canal lógico.</li>
+
+</ul>
+</section>
+<section id="slide-orgcab10f6">
+<h3 id="orgcab10f6"><span class="section-number-3">4.3.</span> Multiplexación por división en <b>tiempo</b></h3>
+<ul>
+<li>Se divide el tiempo en ranuras.</li>
+<li>Cada canal obtiene determinadas ranuras de tiempo.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org95ef436">
+<h2 id="org95ef436"><span class="section-number-2">5.</span> Sincronización</h2>
+<p>
+Proceso mediante el cual el equipo receptor, conoce los momentos exactos en que debe medir la magnitud de la señal para identificar la información recibida
+</p>
+
+</section>
+<section id="slide-org6408dae">
+<h3 id="org6408dae"><span class="section-number-3">5.1.</span> Multiplexación - Transmisión <b>asíncrona</b></h3>
+<ul>
+<li>Las señales que permiten marcar los tiempos están incluidas en el mensaje transmitido</li>
+<li>En el mensaje hay algunos bits que sirven para sincronizar emisor y receptor.</li>
+<li>Los datos se transmiten enviándolos carácter a carácter, donde cada carácter tiene una longitud de 5 a 8 bits</li>
+<li>El receptor tiene la oportunidad de resincronizarse al principio de cada carácter.</li>
+<li>Requiere de 2 o 3 bits suplementarios por cada carácter</li>
+<li>Sencilla y no costosa</li>
+
+</ul>
+
+</section>
+<section id="slide-org6c7e76b">
+<h3 id="org6c7e76b"><span class="section-number-3">5.2.</span> Multiplexación - Transmisión <b>síncrona</b></h3>
+<ul>
+<li>Los bits se envían a una velocidad constante sin diferenciar los caracteres que componen.</li>
+<li>El emisor y el receptor utilizan relojes a la misma frecuencia.</li>
+<li>El comienzo y el final de cada bloque de datos se identifican con patrones de bits conocidos en ambos lados de la comunicación.</li>
+<li>Permite velocidades de transmisión mayores</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd219afc">
+<h2 id="orgd219afc"><span class="section-number-2">6.</span> Modos de transmisión</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+</section>
+<section id="slide-org9c62333">
+<h3 id="org9c62333"><span class="section-number-3">6.1.</span> Transmisión <b>serie</b></h3>
+<p>
+<b>Todas las señales se transmiten por una única línea de datos secuencialmente</b>
+</p>
+</section>
+<section id="slide-org780cff7">
+<h3 id="org780cff7"><span class="section-number-3">6.2.</span> Transmisión <b>paralelo</b></h3>
+<p>
+<b>Se transmiten simultáneamente un grupo de bits, uno por cada línea del mismo canal.</b>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org2bbc406">
+<h2 id="org2bbc406"><span class="section-number-2">7.</span> Perturbaciones en la transmisión</h2>
+<ul>
+<li>En una transmisión, la señal recibida puede ser distinta de la emitida por culpa de perturbaciones:</li>
+
+</ul>
+</section>
+<section id="slide-org25ede9d">
+<h3 id="org25ede9d"><span class="section-number-3">7.1.</span> Atenuación</h3>
+<ul>
+<li>Debilita la señal</li>
+<li>La amplitud disminuye</li>
+
+</ul>
+</section>
+<section id="slide-orga06bce5">
+<h3 id="orga06bce5"><span class="section-number-3">7.2.</span> Distorsión</h3>
+<ul>
+<li>Deformación de la señal por el hecho de que la velocidad de propagación de la señal en el medio varía con las características de la señal misma</li>
+
+</ul>
+</section>
+<section id="slide-org6045047">
+<h3 id="org6045047"><span class="section-number-3">7.3.</span> Interferencia</h3>
+<ul>
+<li>Suma a la señal que se transmite de otra señal conocida y no deseada.</li>
+
+</ul>
+</section>
+<section id="slide-org6fa1981">
+<h3 id="org6fa1981"><span class="section-number-3">7.4.</span> Ruido</h3>
+<ul>
+<li>Es la suma de múltiples interferencias, posiblemente de origen desconocido y de naturaleza aleatoria.</li>
+<li>El ruido se puede aislar solo en ciertos casos.</li>
+
+</ul>
+</section>
+<section id="slide-org0969cca">
+<h3 id="org0969cca"><span class="section-number-3">7.5.</span> Diafonía</h3>
+<ul>
+<li>Parte de las señales presentes en uno de ellos, considerado perturbador, aparece en el otro, considerado perturbado.</li>
+<li>Ejemplo: escuchar a otra conversación por teléfono.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

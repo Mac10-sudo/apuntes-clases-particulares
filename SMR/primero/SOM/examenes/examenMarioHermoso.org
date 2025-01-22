@@ -1,0 +1,4 @@
+* Ejercicio 1
+- Comando que te lleva a tu directorio personal
+  - =cd=
+-     

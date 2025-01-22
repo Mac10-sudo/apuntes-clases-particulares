@@ -1,0 +1,30 @@
+#+INCLUDE: ~/repos/clases-particulares/SMR/smr-template.org
+#+TITLE: Preparación Primer Exámen SOR
+
+\blankpage
+
+* Teoría
+1. Dime las clasificaciones por SO que conoces
+2. ¿Cuáles son los distintos tipos de SO por su forma?
+3. ¿Cuáles son las ventajas de las máquinas virtuales?
+4. ¿Cuál es la diferencia entre VDI y OVA?
+5. Explica las siguientes configuraciones de red de VirtualBox:
+   - *NAT*
+   - *Bridged*
+   - *Red Interna*
+6. Dime todas las diferencias que conozcas entre las versiones /Home/ y /Pro/ de /Microsoft Windows/
+7. Explícame MBR
+8. Explícamen GPT
+9. Dime todo lo que sepas sobre los siguientes /filesystems/:
+   - FAT16
+   - FAT32
+   - exFat
+   - NTFS
+10. Define y clasifica:
+   - Licencia OEM
+   - Licencia por volumen
+   - /Software freeware/
+   - /Software shareware/
+   - Licencia GNU
+
+* Práctica

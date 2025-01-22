@@ -1,0 +1,61 @@
+# -*- mode: org -*-
+#+AUTHOR: Ismael Macareno Chouikh
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+STARTUP: overview
+#+LANGUAGE: es
+# OPTIONS: toc:nil, en caso de que quereamos quitar la tabla de contenidos
+
+
+# Para quitar el recuadro que se pone por defecto a los títulos de la tabla de contenidos
+#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=black}
+
+# Para establecer una cabecera de página con lado derecho e izquierdo y también el pie de página con lado izquierdo y derecho y formato de conteo de páginas en 1 de X
+#+LaTeX_HEADER: \usepackage{geometry}
+#+LaTeX_HEADER: \geometry{top=2cm}
+#+LaTeX_HEADER: \geometry{bottom=2cm}
+#+LaTeX_HEADER: \usepackage{fancyhdr}
+#+LaTeX_HEADER: \pagestyle{fancy}
+#+LaTeX_HEADER: \fancyhf[L]{Implantación de Aplicaciones Web}
+#+LaTeX_HEADER: \fancyhf[R]{Tema 01}
+#+LaTeX_HEADER: \fancyfoot[R]{ismael.macareno@educa.madrid.org}
+#+LaTeX_HEADER: \fancyfoot[L]{CC BY-NC-SA 4.0}
+#+LATEX_HEADER: \usepackage{parskip}
+
+#+LaTeX_HEADER: \usepackage{mdframed}
+#+LaTeX_HEADER: \usepackage{fancyvrb}
+#+LaTeX_HEADER: \usepackage{xcolor}
+
+#+LaTeX_HEADER: \definecolor{shadecolor}{RGB}{220,220,220}
+
+#+LaTeX_HEADER: \newenvironment{shadedcode}{%
+#+LaTeX_HEADER:     \VerbatimEnvironment
+#+LaTeX_HEADER:     \begin{mdframed}[backgroundcolor=shadecolor,linewidth=0pt]}%
+#+LaTeX_HEADER:     {\end{mdframed}}
+#+LaTeX_HEADER: \usepackage{attachfile2}
+#+LATEX_HEADER: \newcommand{\textattachfilecolor}[2]{\textattachfile[color=0 0 0.5]{#1}{\textcolor{blue}{#2}}}
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{datetime2}
+#+LATEX_HEADER: \DTMlangsetup[es-ES]{ord=raise}
+#+LATEX_HEADER: \renewcommand{\dateseparator}{/}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{afterpage}
+#+LATEX_HEADER: \newcommand\blankpage{\null\thispagestyle{empty}\newpage}
+#+LATEX_HEADER: \usepackage{colortbl}
+#+LaTeX_HEADER: \usepackage{pdfpages}
+
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \lstset{
+#+LATEX_HEADER:   inputencoding=utf8,
+#+LATEX_HEADER:   extendedchars=true,
+#+LATEX_HEADER:   literate={ñ}{{\~n}}1 {Ñ}{{\~N}}1 {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1,
+#+LATEX_HEADER:   basicstyle=\ttfamily,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   columns=fullflexible,
+#+LATEX_HEADER:   keepspaces=true,
+#+LATEX_HEADER:   language=TeX,
+#+LATEX_HEADER:   morekeywords={*, -, **, /}
+#+LATEX_HEADER: }
+
+# \blankpage

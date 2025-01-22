@@ -1,0 +1,5 @@
+* <2025-01-15 Wed>
+- Clase dedicada a instalación de VMWorkstation en MV con documentación al mismo tiempo (no lo finaliza del todo)
+* <2025-01-16 Thu>
+- Terminar la instalación de una MV en VMWare (30 min máx.)
+- Temario de RL, empezar con los aspectos físicos
